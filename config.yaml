@@ -90,7 +90,7 @@ bar:
       label_mute: "🔇"
       margin: "0 4px 0"
     - type: "music"
-      margin: "0 4px 0"
+      margin: "0 4px 1px"
       font_size: "9px"
   components_right:
     - type: "battery"
@@ -136,6 +136,11 @@ window_rules:
     match_process_name: "QQ"
     match_title: "图片查看器"
 
+  # float QQ's screen sharing
+  - command: "set floating"
+    match_process_name: "QQ"
+    match_title: "屏幕共享"
+
   # Some applications (eg. Steam) have borders that extend past the normal border size.
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "steam"
@@ -154,7 +159,7 @@ binding_modes:
         bindings: ["J", "Down"]
       # Press enter/escape to return to default keybindings.
       - command: "binding mode none"
-        bindings: ["Escape", "Enter"]
+        bindings: ["Escape", "Q"]
 
 keybindings:
   # Shift focus in a given direction.
@@ -235,9 +240,9 @@ keybindings:
 
   # Focus the next/previous workspace defined in `workspaces` config.
   - command: "focus workspace next"
-    binding: "Alt+T"
+    binding: "Alt+N"
   - command: "focus workspace prev"
-    binding: "Alt+Shift+T"
+    binding: "Alt+B"
 
   # Change focus to a workspace defined in `workspaces` config.
   - command: "focus workspace 1"
