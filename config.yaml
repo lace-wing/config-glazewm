@@ -141,6 +141,11 @@ window_rules:
     match_process_name: "QQ"
     match_title: "屏幕共享"
 
+  # float QQ's video player
+  - command: "set floating"
+    match_process_name: "QQ"
+    match_title: "视频播放器"
+
   # Some applications (eg. Steam) have borders that extend past the normal border size.
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "steam"
